@@ -70,6 +70,49 @@
             color: white;
             border: 2px solid #a71d2a;
         }
+/* ----------------------------------------------- */
+
+
+        p {
+            padding-top: 40px;
+            margin: 0;
+            font-size: 100px;
+            font-family: sans-serif;
+            text-align: center;
+            vertical-align: middle;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .inner-div {
+            height: 200px;
+            width: 400px;
+            margin: 10px;
+            background: #0a5ec9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        /* Анимация для блоков */
+        .inner-div:hover {
+            transform: scale(1.02);              
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Позволяет блокам переноситься на новую строку */
+            justify-content: flex-start; /* Выравнивание по левому краю */
+            max-width: 1300px; /* Ограничивает ширину контейнера */
+            margin: 0 auto; /* Центрируем контейнер */
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 15px;
+        }
+
+
+
 
 
 
