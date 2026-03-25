@@ -18,22 +18,28 @@
         <a href="login.html" class="btn-login">Вход</a>
     </div>
 
-<form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">Мы никогда никому не передадим вашу электронную почту.</div>
+
+    <div class="registration-page">
+      <div class="container">
+          <div class="registration-form-wrapper">
+              <h2>Вход</h2>
+              <form id="registration-form">
+
+                  <label for="reg-email">Email:</label>
+                  <input type="email" id="reg-email" name="email" required placeholder="Введите ваш email">
+
+                  <label for="reg-username">Логин:</label>
+                  <input type="text" id="reg-username" name="username" required placeholder="Введите логин">
+
+                  <label for="reg-password">Пароль:</label>
+                  <input type="password" id="reg-password" name="password" required placeholder="Введите пароль">
+
+              </form>
+              <p class="registration-footer">Вы ещё не зарегистрированы? <a href="register.html">Зарегистрируйтесь</a></p>
+              <p class="registration-back"><a href="proect.html">← Вернуться на главную</a></p>
+          </div>
+      </div>
   </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Пароль</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Проверить меня</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Отправить</button>
-</form>
 
 
 
