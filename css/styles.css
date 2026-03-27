@@ -42,98 +42,156 @@
         }
         
         .btn-main {
-            background-color: #007bff;
+            background-color: #49453f;
             color: white;
-            border: 2px solid #0056b3;
+            border: 2px solid #49453f;
         }
         
         .btn-about {
-            background-color: #28a745;
+            background-color: #49453f;
             color: white;
-            border: 2px solid #1e7e34;
+            border: 2px solid #49453f;
         }
         
         .btn-cart {
-            background-color: #ffc107;
-            color: black;
-            border: 2px solid #d39e00;
+            background-color: #49453f;
+            color: white;
+            border: 2px solid #49453f;
         }
         
         .btn-register {
-            background-color: #17a2b8;
+            background-color: #49453f;
             color: white;
-            border: 2px solid #117a8b;
+            border: 2px solid #49453f;
         }
         
         .btn-login {
-            background-color: #dc3545;
+            background-color: #49453f;
             color: white;
-            border: 2px solid #a71d2a;
+            border: 2px solid #49453f;
         }
 /* ----------------------------------------------- */
+/* --------------------------------Регистрация------------------------------------------- */
+
+.registration-page {
+    display: flex; /* Flexbox для центрирования */
+     align-items: center; /* Центрирование по вертикали */
+     justify-content: center; /* Центрирование по горизонтали */
+     padding: 60px 0; /* Отступы сверху и снизу */
+ 
+ }
+ 
+ .registration-form-wrapper {
+     background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон (95%) */
+     padding: 40px;/* Внутренние отступы 40px */
+     border-radius: 8px; /* Закруглённые углы */
+     box-shadow: 0 4px 20px rgba(139, 115, 85, 0.15);  /* Мягкая тень тёплого оттенка */
+     max-width: 450px; /* Максимальная ширина формы */
+     width: 100%; /* Адаптивная ширина */
+     margin: 0 auto;/* Центрирование блока */
+ }
+ 
+ .registration-form-wrapper h2 {
+     text-align: center; /* Текст по центру */
+     margin-bottom: 30px; /* Отступ снизу */
+     color: #09617c; /* Тёплый коричневый цвет */
+ }
+ 
+ .registration-form-wrapper label {
+     display: block; /* Каждый label с новой строки */
+     margin-bottom: 8px; /* Отступ до поля ввода */
+     font-weight: bold; /* Жирный шрифт */
+     color: #264061; /* Тёмно-коричневый цвет */
+ }
+ 
+ .registration-form-wrapper input[type="text"],
+ .registration-form-wrapper input[type="password"],
+ .registration-form-wrapper input[type="email"],
+ .registration-form-wrapper input[type="tel"] {
+     width: 100%; /* На всю ширину контейнера */
+     padding: 12px; /* Внутренние отступы */
+     margin-bottom: 20px; /* Отступ снизу до следующего элемента */
+     border: 1px solid #ccc; /* Серая рамка */
+     border-radius: 4px; /* Небольшое скругление */
+     box-sizing: border-box; /* Padding включён в ширину */
+     font-family: 'Montserrat', sans-serif;  /* Шрифт как на сайте */
+ }
+ 
+ .registration-form-wrapper
+ .btn-register-submit {
+     width: 100%; /* На всю ширину */
+     background-color: #09317c; /* Коричневый фон */
+     color: #fff; /* Белый текст */
+     border: 2px solid #052957; /* Рамка в цвет фона */
+     padding: 12px 25px; /* Отступы */
+     border-radius: 5px; /* Скругление */
+     margin: 10px 0 20px 0; /* Отступы сверху и снизу */
+     cursor: pointer; /* Курсор-указатель */
+     font-weight: bold; /* Жирный текст */
+ }
+ 
+ .registration-footer,
+ .registration-back {
+     text-align: center; /* Текст по центру */
+     margin-top: 15px; /* Отступ сверху 15px */
+     font-size: 14.4px; /* Шрифт на 10% меньше основного (≈14.4px) */
+     color: #770606; /* Серый цвет текста */
+ }
+ 
+ .registration-footer a,
+ .registration-back a {
+     color: #523a03; /* Золотисто-бежевый цвет ссылок */
+     font-weight: bold; /* Жирное начертание */
+ }
 
 
-        p {
-            padding-top: 40px;
-            margin: 0;
-            font-size: 100px;
-            font-family: sans-serif;
-            text-align: center;
-            vertical-align: middle;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
 
-        .inner-div {
-            height: 200px;
-            width: 400px;
-            margin: 10px;
-            background: #0a5ec9;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
+ /*------------------------------------------------------  */
+/* Главная  */
 
-        /* Анимация для блоков */
-        .inner-div:hover {
-            transform: scale(1.02);              
-            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap; /* Позволяет блокам переноситься на новую строку */
-            justify-content: flex-start; /* Выравнивание по левому краю */
-            max-width: 1300px; /* Ограничивает ширину контейнера */
-            margin: 0 auto; /* Центрируем контейнер */
-            padding: 20px;
-            background-color: #f0f0f0;
-            border-radius: 15px;
-        }
-
-/* --------------------------------------------------------------------------- */
-
-        /* Регистрация */
-.row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: calc(-.5 * var(--bs-gutter-x));
-    margin-left: calc(-.5 * var(--bs-gutter-x));
-    flex-direction: column;
-
+/* Services */
+.services h2 {
+    margin-bottom: 40px; /* Отступ под заголовком */
 }
-.rowe{
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
+
+.services-grid {
+    display: grid; /* Grid раскладка */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Адаптивные колонки */
+    gap: 30px; /* Расстояние между элементами */
 }
 
+/* Карточка услуги */
+.service-item {
+    text-align: center; /* Центрирование текста */
+    background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон */
+    padding: 25px; /* Внутренние отступы */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Легкая тень */
+    backdrop-filter: blur(10px); /* Эффект размытия фона */
+}
 
+.service-item img {
+    border-radius: 5px; /* Закругление изображения */
+    margin-bottom: 15px; /* Отступ снизу */
+    width: 100%; /* Полная ширина */
+    height: 200px; /* Фиксированная высота */
+    object-fit: cover; /* Заполнение без искажений */
+}
 
+.service-item h3 {
+    font-size: 25.6px; /* Размер заголовка */
+}
 
+.service-item p {
+    font-size: 15.2px; /* Размер текста описания */
+    color: #666; /* Серый цвет текста */
+    margin-bottom: 15px; /* Отступ снизу */
+}
 
-
-
-
+/* Цена услуги */
+.price {
+    font-weight: bold; /* Жирный шрифт */
+    font-size: 19.2px; /* Размер цены */
+    color: #8b7355; /* Тёплый коричневый цвет для лучшей читаемости */
+    margin-top: 10px; /* Отступ сверху */
+}

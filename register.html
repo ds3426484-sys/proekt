@@ -19,25 +19,42 @@
     </div>
 
     
+    <div class="registration-page">
+      <div class="container">
+          <div class="registration-form-wrapper">
+              <h2>Регистрация</h2>
+              <form id="registration-form">
+                <label for="reg-fam">Ваша Фамилия:</label>
+                <input type="text" id="reg-fam" name="fam" required placeholder="Введите вашу фамилию">  
 
-    <div class="rowe">
-  <div class="col-md">
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="">
-      <label for="floatingInputGrid">Адрес электронной почты</label>
-    </div>
-  </div>
-  <div class="col-md">
-    <div class="form-floating">
-      <select class="form-select" id="floatingSelectGrid">
-        <option selected>Пароль не выбран</option>
-        <option value="1">Gs-46frm/sdf</option>
-        <option value="2">NUC-rgids.43534</option>
-        <option value="3">Vadm-3245674/sdrg</option>
-      </select>
-      <label for="floatingSelect">Выбор пароля</label>
-    </div>
-  </div>
-</div>
+                  <label for="reg-name">Ваше имя:</label>
+                  <input type="text" id="reg-name" name="name" required placeholder="Введите ваше имя">
 
+                  <label for="reg-ote">Ваше Отчество:</label>
+                  <input type="text" id="reg-ote" name="ote" required placeholder="Введите ваше отчество">
+
+                  <label for="reg-username">Логин:</label>
+                  <input type="text" id="reg-username" name="username" required placeholder="Придумайте логин">
+
+                  <label for="reg-email">Email:</label>
+                  <input type="email" id="reg-email" name="email" required placeholder="Введите ваш email">
+
+                  <label for="reg-phone">Телефон:</label>
+                  <input type="tel" id="reg-phone" name="phone" required placeholder="+7 (___) ___-__-__" maxlength="18" inputmode="tel">
+
+                  <label for="reg-password">Пароль:</label>
+                  <input type="password" id="reg-password" name="password" required placeholder="Придумайте пароль">
+
+                  <label for="reg-password-confirm">Подтвердите пароль:</label>
+                  <input type="password" id="reg-password-confirm" name="password-confirm" required placeholder="Повторите пароль">
+
+                  <button type="submit" class="btn btn-register-submit">Зарегистрироваться</button>
+              </form>
+              <p class="registration-footer">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+              <p class="registration-back"><a href="proect.html">← Вернуться на главную</a></p>
+          </div>
+      </div>
+  </div>
+
+<script src="js/cod.js"></script>
 </body>    
