@@ -6,7 +6,7 @@
             gap: 20px;
             padding: 20px;
             background-color: rgba(248, 249, 250, 0.9);
-            border-radius: 10px;
+            /* border-radius: 10px; */
             margin: 0px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             position: relative;
@@ -70,7 +70,7 @@
             color: white;
             border: 2px solid #49453f;
         }
-/* ----------------------------------------------- */
+
 /* --------------------------------Регистрация------------------------------------------- */
 
 .registration-page {
@@ -101,7 +101,7 @@
      display: block; /* Каждый label с новой строки */
      margin-bottom: 8px; /* Отступ до поля ввода */
      font-weight: bold; /* Жирный шрифт */
-     color: #2a2661; /* Тёмно-коричневый цвет */
+     color: #264061; /* Тёмно-коричневый цвет */
  }
  
  .registration-form-wrapper input[type="text"],
@@ -120,9 +120,9 @@
  .registration-form-wrapper
  .btn-register-submit {
      width: 100%; /* На всю ширину */
-     background-color: #5f558b; /* Коричневый фон */
+     background-color: #09317c; /* Коричневый фон */
      color: #fff; /* Белый текст */
-     border: 2px solid #7c558b; /* Рамка в цвет фона */
+     border: 2px solid #052957; /* Рамка в цвет фона */
      padding: 12px 25px; /* Отступы */
      border-radius: 5px; /* Скругление */
      margin: 10px 0 20px 0; /* Отступы сверху и снизу */
@@ -146,10 +146,9 @@
 
 
 
- /*------------------------------------------------------  */
-/* Главная  */
+ /*-----------------------Блоки-------------------------------  */
 
-/* Services */
+
 .services h2 {
     margin-bottom: 40px; /* Отступ под заголовком */
 }
@@ -160,7 +159,6 @@
     gap: 30px; /* Расстояние между элементами */
 }
 
-/* Карточка услуги */
 .service-item {
     text-align: center; /* Центрирование текста */
     background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон */
@@ -179,7 +177,7 @@
 }
 
 .service-item h3 {
-    font-size: 25.6px; /* Размер заголовка */
+    font-size: 25px; /* Размер заголовка */
 }
 
 .service-item p {
@@ -188,14 +186,52 @@
     margin-bottom: 15px; /* Отступ снизу */
 }
 
-/* Цена услуги */
 .price {
     font-weight: bold; /* Жирный шрифт */
     font-size: 19.2px; /* Размер цены */
     color: #8b7355; /* Тёплый коричневый цвет для лучшей читаемости */
     margin-top: 10px; /* Отступ сверху */
 }
+/* ------------------------------------------------------------------------ */
+
+
+                        /* Слайдер */
+.slider {
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* создатель сайта */
 
 
 
+.creator{
+    width: 60%;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex: content;
+    background-color: #770606;
 
+
+}

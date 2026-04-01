@@ -1,57 +1,41 @@
-async function fetchData(fam, name, ote, username, email, phone, password) {
-    let url = `http://localhost/myserver/?fam=${encodeURIComponent(fam)}&name=${encodeURIComponent(name)}&ote=${encodeURIComponent(ote)}&username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&password=${encodeURIComponent(password)}`
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider');
+    const track = document.querySelector('.slider-track');
+    const slides = document.querySelectorAll('.slide');
     
-    try {
-        let response = await fetch(url, {
-            method: 'GET',
-            headers: { Accept: 'application/json' },
-        })
-        let data = await response.json()
-        
-        if (data.status === 'success') {
-            alert(data.message)
-            
+    let currentSlide = 0;
+    const slideCount = slides.length;
+    const slideWidth = slides[0].clientWidth;
+    let autoSlideInterval;
+    
+    // Функция для перехода к слайду
+    function goToSlide(index) {
+        if (index < 0) {
+            currentSlide = slideCount - 1;
+        } else if (index >= slideCount) {
+            currentSlide = 0;
         } else {
-            alert(data.message)
+            currentSlide = index;
         }
-    } catch (error) {
-        console.error('Ошибка:', error)
-        alert('Ошибка соединения с сервером')
-    }
-}
-
-function get_data_form() {
-    // Регистрация
-    const regForm = document.querySelector('#registration-form')
-    if (regForm) {
-        regForm.addEventListener('submit', function(event) {
-            event.preventDefault()
-
-            const fam = document.querySelector('#reg-fam').value
-            const name = document.querySelector('#reg-name').value
-            const ote = document.querySelector('#reg-ote').value
-            const username = document.querySelector('#reg-username').value
-            const email = document.querySelector('#reg-email').value
-            const phone = document.querySelector('#reg-phone').value
-            const password = document.querySelector('#reg-password').value
-            const passwordConfirm = document.querySelector('#reg-password-confirm').value
-
-            if (password !== passwordConfirm) {
-                alert('Пароли не совпадают')
-                return
-            }
-
-            console.log('Отправка данных:', { fam, name, ote, username, email, phone }) 
-            fetchData(fam, name, ote, username, email, phone, password)
-        })
+        
+        track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
     }
     
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    get_data_form()
-})
-
-
-
-
+    // Автопрокрутка
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            goToSlide(currentSlide + 1);
+        }, 3000); // Смена слайда каждые 3 секунды
+    }
+    
+    // Остановка автопрокрутки при наведении
+    slider.addEventListener('mouseenter', () => {
+        clearInterval(autoSlideInterval);
+    });
+    
+    // Возобновление автопрокрутки при уходе курсора
+    slider.addEventListener('mouseleave', startAutoSlide);
+    
+    // Запуск автопрокрутки
+    startAutoSlide();
+});
