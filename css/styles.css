@@ -71,7 +71,7 @@
             border: 2px solid #49453f;
         }
 
-/* --------------------------------Регистрация------------------------------------------- */
+/* --------------------------------Регистрация - Вход------------------------------------------- */
 
 .registration-page {
     display: flex; /* Flexbox для центрирования */
@@ -221,17 +221,56 @@
     display: block;
 }
 
-/* создатель сайта */
 
-
-
-.creator{
-    width: 60%;
-    height: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex: content;
-    background-color: #770606;
-
-
+/* input.input-error,
+textarea.input-error,
+select.input-error {
+    border-color: red !important;
+    background-color: #fff8f8;
 }
+
+input.input-valid,
+textarea.input-valid,
+select.input-valid {
+    border-color: green !important;
+}
+
+.error-message {
+    color: #b33939;
+    font-size: 0.85em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #ffcccc;
+    border-radius: 3px;
+    display: none;
+} */
+
+
+
+
+
+/* наши работники */
+.service-item1 img {
+    border-radius: 5px; /* Закругление изображения */
+    margin-bottom: 15px; /* Отступ снизу */
+    width: 80%; /* Полная ширина */
+    height: 455px; /* Фиксированная высота */
+    object-fit: cover; /* Заполнение без искажений */
+}
+
+.service-item1 {
+    text-align: center; /* Центрирование текста */
+    background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон */
+    padding: 25px; /* Внутренние отступы */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Легкая тень */
+    backdrop-filter: blur(10px); /* Эффект размытия фона */
+}
+
+
+
+
+
+
+
