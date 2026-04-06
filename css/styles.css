@@ -111,12 +111,20 @@
      width: 100%; /* На всю ширину контейнера */
      padding: 12px; /* Внутренние отступы */
      margin-bottom: 20px; /* Отступ снизу до следующего элемента */
-     border: 1px solid #ccc; /* Серая рамка */
      border-radius: 4px; /* Небольшое скругление */
      box-sizing: border-box; /* Padding включён в ширину */
      font-family: 'Montserrat', sans-serif;  /* Шрифт как на сайте */
  }
- 
+ /*  !
+      Валидация input 
+! */
+input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 1px solid #1fce18;
+}
  .registration-form-wrapper
  .btn-register-submit {
      width: 100%; /* На всю ширину */
@@ -374,8 +382,6 @@
         height: 10px;
     }
 }
-
-
 
 
 
