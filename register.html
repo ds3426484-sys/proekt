@@ -23,12 +23,12 @@
       <div class="container">
           <div class="registration-form-wrapper">
               <h2>Регистрация</h2>
-              <form id="registration-form">
+              <form id="registration" name="registration">
                 <label for="reg-fam">Ваша Фамилия:</label>
-                <input type="text" id="reg-fam" name="fam" required placeholder="Введите вашу фамилию">  
+                <input type="text" id="fam" name="fam" required placeholder="Введите вашу фамилию">  
 
                   <label for="reg-name">Ваше имя:</label>
-                  <input type="text" id="reg-name" name="name" required placeholder="Введите ваше имя">
+                  <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
 
                   <label for="reg-ote">Ваше Отчество:</label>
                   <input type="text" id="reg-ote" name="ote" required placeholder="Введите ваше отчество">
@@ -48,13 +48,14 @@
                   <label for="reg-password-confirm">Подтвердите пароль:</label>
                   <input type="password" id="reg-password-confirm" name="password-confirm" required placeholder="Повторите пароль">
 
-                  <button type="submit" class="btn btn-register-submit">Зарегистрироваться</button>
-              </form>
+                  <button type="submit" class="btn btn-register-submit" onclick="myfanc()">Зарегистрироваться</button>
+                </form>
+             
               <p class="registration-footer">Уже есть аккаунт? <a href="login.html">Войти</a></p>
               <p class="registration-back"><a href="index.html">← Вернуться на главную</a></p>
           </div>
       </div>
   </div>
 
-<script src="js/cod.js"></script>
+<script src="js/reg.js"></script>
 </body>    
