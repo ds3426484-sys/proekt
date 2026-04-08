@@ -42,32 +42,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
-
-// Валидация для входа и регистрации
-// function validateField(fieldId) {
-//     const field = document.querySelector('#' + fieldId)
-//     const errorDiv = document.querySelector('#' + fieldId + '-error')
-//     if (!field || !errorDiv) return true
-
-//     const value = field.value
-
-//     if (fieldId === 'email') {
-//     const emailRegex = /^[a-zA-Z0-9._-]+@(gmail|mail|yandex)\.(ru|com)$/
-//     if (!emailRegex.test(value)) {
-//         errorDiv.textContent = 'Email должен быть @gmail, @mail или @yandex (.ru или .com)'
-//         errorDiv.style.display = 'block'
-//         field.classList.add('input-error')
-//         return false
-//         } else {
-//         errorDiv.textContent = ''
-//         errorDiv.style.display = 'none'
-//         field.classList.remove('input-error')
-//         return true
-//         }
-//     }
-// }
-
-
-

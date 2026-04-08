@@ -1,15 +1,17 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас</title>
+    <title>О нас - Пекарня Хлеб</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Меню (как в других страницах) -->
     <div class="menu">
         <a href="index.html" class="btn-main">Главная</a>
         <a href="about.html" class="btn-about">О нас</a>
@@ -18,17 +20,36 @@
         <a href="login.html" class="btn-login">Вход</a>
     </div>
 
-<h2>Для чего создан этот сайт и эта компания</h2>
-<h2>Контакты</h2>
-<h2>Новости</h2>
+    <!-- Блок 1: Для чего создан сайт -->
+    <section class="about-section">
+        <h2>Для чего создан этот сайт и эта компания</h2>
+        <div class="about-content">
+            <p>Наша пекарня "Хлеб" существует с 1990-х, чтобы дарить свежую выпечку семьям города. Сайт создан для представления ассортимента продукции, поиска сотрудников и коммуникации с клиентами. Мы сочетаем традиции пекарского дела с современными технологиями, предлагая работу в дружном коллективе и вкусные изделия каждый день.</p>
+        </div>
+    </section>
 
+    <!-- Блок 2: Новости -->
+    <section class="about-section">
+        <h2>Новости</h2>
+        <div class="news-item">
+            <div class="news-date">15.10.2024</div>
+            <p>Открыта новая вакансия пекаря! Зарплата от 60 000 руб., бесплатное питание.</p>
+        </div>
+        <div class="news-item">
+            <div class="news-date">10.10.2024</div>
+            <p>Акция: свежий ржаной хлеб со скидкой 20% всю неделю!</p>
+        </div>
+    </section>
 
-
-
-
-
-
-
-
-
-</body> 
+    <!-- Блок 3: Контакты -->
+    <section class="about-section">
+        <h2>Контакты</h2>
+        <div class="contacts-item">
+            <p><strong>Адрес:</strong> ул. Хлебная, 1, г. ВашГород</p>
+            <p><strong>Телефон:</strong> +7 (XXX) XXX-XX-XX</p>
+            <p><strong>Email:</strong> info@hleb-bakery.ru</p>
+            <p><strong>Часы работы:</strong> Пн-Вс: 06:00 - 22:00</p>
+        </div>
+    </section>
+</body>
+</html>

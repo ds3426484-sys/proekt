@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,9 +8,12 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </head>
 </head>
+
 <body>
     <div class="menu">
         <a href="index.html" class="btn-main">Главная</a>
@@ -18,43 +23,49 @@
         <a href="login.html" class="btn-login">Вход</a>
     </div>
 
-    
+
     <div class="registration-page">
-      <div class="container">
-          <div class="registration-form-wrapper">
-              <h2>Регистрация</h2>
-              <form id="registration-form">
-                <label for="reg-fam">Ваша Фамилия:</label>
-                <input type="text" id="reg-fam" name="fam" required placeholder="Введите вашу фамилию">  
+        <div class="container">
+            <div class="registration-form-wrapper">
+                <h2>Регистрация</h2>
+                <form id="registration" name="registration">
+                    <label for="reg-fam">Ваша Фамилия:</label>
+                    <input type="text" id="fam" name="fam" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите вашу фамилию">
 
-                  <label for="reg-name">Ваше имя:</label>
-                  <input type="text" id="reg-name" name="name" required placeholder="Введите ваше имя">
+                    <label for="reg-name">Ваше имя:</label>
+                    <input type="text" id="name" name="name" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите ваше имя">
 
-                  <label for="reg-ote">Ваше Отчество:</label>
-                  <input type="text" id="reg-ote" name="ote" required placeholder="Введите ваше отчество">
+                    <label for="reg-ote">Ваше Отчество:</label>
+                    <input type="text" id="ote" name="ote" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите ваше отчество">
 
-                  <label for="reg-username">Логин:</label>
-                  <input type="text" id="reg-username" name="username" required placeholder="Придумайте логин">
+                    <label for="reg-username">Логин:</label>
+                    <input type="text" id="username" name="username" required pattern="(^\w+$)" placeholder="Придумайте логин">
 
-                  <label for="reg-email">Email:</label>
-                  <input type="email" id="reg-email" name="email" required placeholder="Введите ваш email">
+                    <label for="reg-email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Введите ваш email"
+                        pattern="(^(\D\w+)@(mail\.ru||yandex\.ru||gmail\.com))$">
 
-                  <label for="reg-phone">Телефон:</label>
-                  <input type="tel" id="reg-phone" name="phone" required placeholder="+7 (___) ___-__-__" maxlength="18" inputmode="tel">
+                    <label for="reg-phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__"
+                        maxlength="18" inputmode="tel">
 
-                  <label for="reg-password">Пароль:</label>
-                  <input type="password" id="reg-password" name="password" required placeholder="Придумайте пароль">
+                    <label for="reg-password">Пароль:</label>
+                    <input type="password" id="password" name="password" required pattern="^(\w){8,12}$"
+                        placeholder="Придумайте пароль">
 
-                  <label for="reg-password-confirm">Подтвердите пароль:</label>
-                  <input type="password" id="reg-password-confirm" name="password-confirm" required placeholder="Повторите пароль">
+                    <label for="reg-password-confirm">Подтвердите пароль:</label>
+                    <input type="password" id="password-confirm" name="password-confirm" required
+                        placeholder="Повторите пароль">
 
-                  <button type="submit" class="btn btn-register-submit">Зарегистрироваться</button>
-              </form>
-              <p class="registration-footer">Уже есть аккаунт? <a href="login.html">Войти</a></p>
-              <p class="registration-back"><a href="index.html">← Вернуться на главную</a></p>
-          </div>
-      </div>
-  </div>
+                    <button type="submit" class="btn btn-register-submit" id="btn-register">Зарегистрироваться</button>
+                </form>
 
-<script src="js/cod.js"></script>
-</body>    
+                <p class="registration-footer">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+                <p class="registration-back"><a href="index.html">← Вернуться на главную</a></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="js/reg.js"></script>
+</body>
