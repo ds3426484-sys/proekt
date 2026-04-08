@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +27,7 @@
               <form id="registration-form">
 
                   <label for="reg-email">Email:</label>
-                  <input type="email" id="reg-email" name="email" required placeholder="Введите ваш email">
+                  <input type="email" id="reg-email" name="email" required placeholder="Введите ваш email"  pattern="(^(\D\w+)@(mail\.ru||yandex\.ru||gmail\.com))$">
 
                   <label for="reg-password">Пароль:</label>
                   <input type="password" id="reg-password" name="password" required placeholder="Введите пароль">
@@ -41,6 +42,4 @@
 
 
 <script src="js/cod.js"></script>
-</body> 
-
 </body> 
