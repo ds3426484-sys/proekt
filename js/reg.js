@@ -1,24 +1,52 @@
-console.log(111)
-
-function myfanc() {
-	console.log(111)
-	// функция отправки и приема данных (ajax)
-	var formData = new FormData(document.forms.registration)
-	console.dir(formData) // что там отправляем то?
-	var xhr = new XMLHttpRequest() //создаем объект
-	xhr.onreadystatechange = function () {
-		if (this.readyState == 4 && this.status == 200) {
-			//проверяем ответ на ошибки
-			// если норм то выводим
-			alert('Ошибка')
-		} else {
-			alert('Зарегистрировался')
-			// если нет сообщаем об ошибке
-
-		}
-	}
-	xhr.open('POST', 'http://localhost/myserver/reg') // post запрос на конкретный контроллер
-	xhr.send(formData) //отпраляем данные
+async function fetchData(d) {
+	const url = `http://localhost/myserver2/reg`;
+	const response = await fetch(url, {
+		method: "POST",
+		headers: {
+			Accept: "application/json",
+			"Content-Type": "application/x-www-form-urlencoded",
+		},
+		body: new URLSearchParams(d).toString(),
+	});
+	return response; // Возвращаем response для обработки
 }
+console.log(0)
+// ? Обработчик формы регистрации
+function get_data_form() {
 
- 
+	const btn_reg = document.querySelector("#btn-register");
+
+	btn_reg.addEventListener("click", (event) => {
+		// Сбор данных формы
+		const fam = document.querySelector("#fam").value;
+		const name = document.querySelector("#name").value;
+		const ote = document.querySelector("#ote").value;
+		const username = document.querySelector("#username").value;
+		const email = document.querySelector("#email").value;
+		const phone = document.querySelector("#phone").value;
+		const password = document.querySelector("#password").value;
+
+		d = {
+			fam: fam,
+			name: name,
+			ote: ote,
+			username: username,
+			email: email,
+			phone: phone,
+			password: password,
+		}
+
+		try {
+			// Отправка на сервер
+			const response = fetchData(d);
+			if (response.ok) {
+			} else {
+			}
+		} catch (error) {
+		}
+	});
+}
+// Инициализация при загрузке DOM
+document.addEventListener("DOMContentLoaded", function () {
+	get_data_form();
+});

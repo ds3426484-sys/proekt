@@ -40,3 +40,40 @@ document.addEventListener('DOMContentLoaded', function() {
     startAutoSlide();
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // рвскрывающийся блок
+    document.getElementById('myBlock').onclick = function(e) {
+        if (e.target.classList.contains('title')) {
+            this.classList.toggle('open');
+        }
+    }
+    
+    // модельное окно
+    function openModal() {
+        document.getElementById('modal').style.display = 'block';
+    }
+    
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
