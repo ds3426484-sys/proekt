@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="menu">
@@ -84,8 +86,6 @@
                     </div>
                 </div>
 
-
-
 <br>
 
 <!-- Преимущества работы в нашей компании -->
@@ -124,7 +124,6 @@
                 </div>
             </div>
         </div>
-
         <div class="services">
             <div class="container">
                 <div class="services-grid">
@@ -157,11 +156,161 @@
                         <div class="price"></div>
                     </div>
                 </div>
+                <!-- ----------------------------------------------------------------------- -->
+
+
+<!-- Вакансии -->
+                <h2>Вакансии</h2>
+                                <!-- первый -->
+                <div class="block" id="myBlock">
+                    <div class="title"><b>Мойщик посуды ЗП от 48 000 руб. до 51 500 руб.</b></div>
+                    <div class="content">
+                        <p><b>Условия:</b> <br>
+                            График работы: 2/2 (с 8.00 до 20.00 или с 20.00 до 8.00); <br>
+                            <b>Обязанности:</b> <br>
+                            Мойка производственного инвентаря, вагонеток, шпилек, тележек, противней. <br>
+                            <b>Требования:</b> <br>
+                            Активность; <br>
+                            Устойчивость к физическим нагрузкам; <br>
+                            Наличие медицинской книжки или готовность ее оформления; <br>
+                            Опыт работы на пищевом предприятии приветствуется.</p>
+
+                        <button class="btn" onclick="openModal()" style="background-color: darkorange">Откликнутся на вакансию</button>
+                    </div>
+                </div>
+                <!-- Модельное окно -->
+                <div id="modal" class="modal">
+                    <div class="modal-box">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h3>Отправить резюме</h3>
+                        <form id="registration" name="registration" class="parametr">
+                            <label for="reg-fam">Ваша Фамилия:</label>
+                            <input type="text" id="fam" name="fam" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите вашу фамилию">
+        
+                            <label for="reg-name">Ваше имя:</label>
+                            <input type="text" id="name" name="name" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите ваше имя">
+        
+                            <label for="reg-ote">Ваше Отчество:</label>
+                            <input type="text" id="ote" name="ote" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите ваше отчество">
+        
+                            <label for="reg-email">Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="Введите ваш email"
+                                pattern="(^(\D\w+)@(mail\.ru||yandex\.ru||gmail\.com))$">
+        
+                            <label for="reg-phone">Телефон:</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__"
+                                maxlength="18" inputmode="tel">    
+                        </form>
+                        <form id="registration" name="registration" class="parametr">
+                        <div class="message">
+                            <label for="reg-phone">Сообщение</label>    
+                            <textarea name="message" id="cont-massage" style="height: 150px;"></textarea>
+                        </div>
+                        </form>
+                        <button class="btn" onclick="closeModal()">Отправить</button>
+                    </div>
+                </div>
+
+
+                
+                        <!-- второй -->
+                <div class="block" id="myBloc">
+                    <div class="titl"><b>Пекарь в хлебный цех ЗП от 70 000 руб.</b></div>
+                    <div class="content">
+                            <p class="content-block_title">Условия:</p>
+                            <p class="content-block_podTitle">График работы : 2/2 (день/ночь/отсыпной/выходной с 08:00 - 20:00 и 20:00 - 08:00) </p>
+                            <p class="content-block_title">Обязанности:</p>
+                            <p class="content-block_podTitle">Ведение технологического процесса выпечки хлеба; </p>
+                            <p class="content-block_podTitle">Hаблюдeние за режимом pаcстойки тeстoвыx зaготовoк к выпeчкe;</p> 
+                            <p class="content-block_title">Требования:</p>
+                            <p class="content-block_podTitle">Опыт работы пекарем на производстве будет преимуществом;</p>
+                            <p class="content-block_podTitle">Опыт работы с ротационной и подовой печами будет преимуществом.</p>
+                            <button class="btn" onclick="openModal()" style="background-color: darkorange">Откликнутся на вакансию</button>
+                    </div>
+                </div>
+                <!-- Модельное окно -->
+                <div id="moda" class="modal">
+                    <div class="modal-box">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h3>Отправить резюме</h3>
+                        <form id="registration" name="registration" class="parametr">
+                            <label for="reg-fam">Ваша Фамилия:</label>
+                            <input type="text" id="fam" name="fam" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите вашу фамилию">
+        
+                            <label for="reg-name">Ваше имя:</label>
+                            <input type="text" id="name" name="name" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите ваше имя">
+        
+                            <label for="reg-ote">Ваше Отчество:</label>
+                            <input type="text" id="ote" name="ote" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите ваше отчество">
+        
+                            <label for="reg-email">Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="Введите ваш email"
+                                pattern="(^(\D\w+)@(mail\.ru||yandex\.ru||gmail\.com))$">
+        
+                            <label for="reg-phone">Телефон:</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__"
+                                maxlength="18" inputmode="tel">    
+                        </form>
+                        <form id="registration" name="registration" class="parametr">
+                        <div class="message">
+                            <label for="reg-phone">Сообщение</label>    
+                            <textarea name="message" id="cont-massage" style="height: 150px;"></textarea>
+                        </div>
+                        </form>
+                        <button class="btn" onclick="closeModal()">Отправить</button>
+                    </div>
+                </div>
+
+                <!-- Третий -->
+                <div class="block" id="myBlo">
+                    <div class="tit"><b>Транспортировщик ЗП от 57 000 руб.</b></div>
+                    <div class="content">
+                        <p>Условия: 
+                            График работы: 2/2 (день/ночь/отсыпной/выходной); </p>
+                        <button class="btn" onclick="openModal()" style="background-color: darkorange">Откликнутся на вакансию</button>
+                    </div>
+                </div>
+                <!-- Модельное окно -->
+                <div id="mod" class="modal">
+                    <div class="modal-box">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h3>Отправить резюме</h3>
+                        <form id="registration" name="registration" class="parametr">
+                            <label for="reg-fam">Ваша Фамилия:</label>
+                            <input type="text" id="fam" name="fam" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите вашу фамилию">
+        
+                            <label for="reg-name">Ваше имя:</label>
+                            <input type="text" id="name" name="name" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите ваше имя">
+        
+                            <label for="reg-ote">Ваше Отчество:</label>
+                            <input type="text" id="ote" name="ote" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите ваше отчество">
+        
+                            <label for="reg-email">Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="Введите ваш email"
+                                pattern="(^(\D\w+)@(mail\.ru||yandex\.ru||gmail\.com))$">
+        
+                            <label for="reg-phone">Телефон:</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__"
+                                maxlength="18" inputmode="tel">    
+                        </form>
+                        <form id="registration" name="registration" class="parametr">
+                        <div class="message">
+                            <label for="reg-phone">Сообщение</label>    
+                            <textarea name="message" id="cont-massage" style="height: 150px;"></textarea>
+                        </div>
+                        </form>
+                        <button class="btn" onclick="closeModal()">Отправить</button>
+                    </div>
+                </div>
+
+
+
+
+
+
             </div>
 
 
 
-            
-<h2>Предприятию требуются на постоянную работу</h2>
-
+    <script src="js/cod.js"></script>
 </body> 

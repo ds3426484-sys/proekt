@@ -42,3 +42,61 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+
+// -----------------------------------------------------------
+    // рвскрывающийся блок первый
+    document.getElementById('myBlock').onclick = function(e) {
+        if (e.target.classList.contains('title')) {
+            this.classList.toggle('open');
+        }
+    }
+    
+    // модельное окно
+    function openModal() {
+        document.getElementById('modal').style.display = 'block';
+    }
+    
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
+
+
+
+
+// рвскрывающийся блок второй
+    document.getElementById('myBloc').onclick = function(e) {
+        if (e.target.classList.contains('titl')) {
+            this.classList.toggle('open');
+        }
+    }
+    
+    // модельное окно
+    function openModal() {
+        document.getElementById('moda').style.display = 'block';
+    }
+    
+    function closeModal() {
+        document.getElementById('moda').style.display = 'none';
+    }
+
+
+
+// рвскрывающийся блок третий
+document.getElementById('myBlo').onclick = function(e) {
+    if (e.target.classList.contains('tit')) {
+        this.classList.toggle('open');
+    }
+}
+
+// модельное окно
+function openModal() {
+    document.getElementById('mod').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('mod').style.display = 'none';
+}
+
+
