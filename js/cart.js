@@ -9,14 +9,12 @@ function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
 
-
 // Закрытие по клику вне модалки
 window.onclick = function (event) {
     if (event.target.id === 'modal') {
         closeModal();
     }
 }
-
 
 // Отправка на бд
 
