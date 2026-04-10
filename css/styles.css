@@ -407,6 +407,7 @@ input:valid {
         
         .open .content {
             max-height: 300px;
+            max-height: 100%;
             padding: 20px;
             text-align: center;
         }
