@@ -384,44 +384,52 @@ input:valid {
 }
 
   /* -----------------------стили для вакансий------------------------------------ */
-       .block {
-            border: 2px solid #333;
-            margin: 20px 0;
-        }
-        
-        .title {
-            background: #fafafa;
-            color: rgb(0, 0, 0);
-            padding: 15px;
-            cursor: pointer;
-            font-size: 18px;
-            text-align: center;
-        }
-        
-        .content {
-            max-height: 0;
-            overflow: hidden;
+         .block {
             background: white;
-            transition: max-height 0.3s;
-        }
-        
-        .open .content {
-            max-height: 300px;
-            max-height: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
             padding: 20px;
-            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
+
+        .titl {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d3ae09;
+        }
+
+        .content-block_title {
+            font-weight: bold;
+            color: #d3ae09;
+            margin: 15px 0 5px 0;
+        }
+
+        .content-block_podTitle {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
         .btn {
-            background: #28a745;
+            background: #d3ae09;
             color: white;
             border: none;
-            padding: 10px 20px;
-            cursor: pointer;
+            padding: 12px 24px;
             border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 15px;
         }
-        
-        /* модельное окно */
+
+        .btn:hover {
+            background: #d3ae09;
+        }
+
+        /* Модальное окно */
         .modal {
             display: none;
             position: fixed;
@@ -431,140 +439,59 @@ input:valid {
             height: 100%;
             background: rgba(0,0,0,0.5);
         }
-        
+
         .modal-box {
             background: white;
-            margin: 100px auto;
-            width: 14%;
-            height: 60%;
-            padding: 20px;
+            margin: 50px auto;
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 8px;
+            max-height: 80vh;
+            overflow-y: auto;
         }
-        
+
         .close {
             float: right;
-            font-size: 24px;
+            font-size: 28px;
+            font-weight: bold;
             cursor: pointer;
+            color: #999;
         }
 
+        .close:hover {
+            color: #333;
+        }
 
-    .parametr{
-    width: min-content;
-    }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
 
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
 
-    /* стили для второго */  
-    .titl {
-        background: #fafafa;
-        color: rgb(0, 0, 0);
-        padding: 15px;
-        cursor: pointer;
-        font-size: 18px;
-        text-align: center;
-    }
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
 
+        .form-row .parametr {
+            flex: 1;
+        }
 
-    /* Стили для третьего */
-    .tit {
-        background: #fafafa;
-        color: rgb(0, 0, 0);
-        padding: 15px;
-        cursor: pointer;
-        font-size: 18px;
-        text-align: center;
-    }
-    .content-block_title{
-        font-weight: bold;
-    }
-
-    p {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    /* модульное окно */
-    .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.7);
-        z-index: 1000;
-    }
-
-    .modal-box {
-        background: white;
-        margin: 3% auto;
-        padding: 50px;
-        border-radius: 15px;
-        width: 90%;
-        max-width: 900px;
-        max-height: 90vh;
-        overflow-y: auto;
-        position: relative;
-    }
-
-    .close {
-        position: absolute;
-        right: 25px;
-        top: 20px;
-        font-size: 35px;
-        cursor: pointer;
-        color: #999;
-    }
-
-    .close:hover {
-        color: #333;
-    }
-
-    .modal-box h3 {
-        text-align: center;
-        margin-bottom: 30px;
-        font-size: 26px;
-        color: #333;
-    }
-
-    .parametr label {
-        display: block;
-        margin-bottom: 10px;
-        font-weight: bold;
-        font-size: 16px;
-        color: #333;
-    }
-
-    .parametr input,
-    .parametr textarea {
-        width: 100%;
-        padding: 18px;
-        border: 2px solid #ddd;
-        border-radius: 10px;
-        font-size: 16px;
-        margin-bottom: 20px;
-        box-sizing: border-box;
-    }
-
-    .parametr input:focus,
-    .parametr textarea:focus {
-        border-color: #ff8c00;
-        outline: none;
-    }
-
-    .message textarea {
-        height: 200px;
-        resize: vertical;
-        width: 600px;
-    }
-
-    .form-row {
-        display: flex;
-        gap: 20px;
-    }
-
-    .form-row .parametr {
-        flex: 1;
-    }
-
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+            }
+        }
 
 
 

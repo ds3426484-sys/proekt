@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -156,159 +157,108 @@
                 </div>
                 <!-- ----------------------------------------------------------------------- -->
 
+    <!-- Вакансия 1 -->
+    <div class="block">
+        <div class="titl">Пекарь ЗП от 70 000 руб.</div>
+        <div class="content">
+            <p class="content-block_title">Условия:</p>
+            <p class="content-block_podTitle">График: 2/2 (день/ночь)</p>
+            
+            <p class="content-block_title">Обязанности:</p>
+            <p class="content-block_podTitle">Выпечка хлеба</p>
+            <p class="content-block_podTitle">Контроль расстойки теста</p>
+            
+            <p class="content-block_title">Требования:</p>
+            <p class="content-block_podTitle">Опыт работы пекарем</p>
+            
+            <button class="btn" onclick="openModal(1)">Откликнуться</button>
+        </div>
+    </div>
 
-<!-- Вакансии -->
-                                <!-- первый -->
-                <div class="block" id="myBlock">
-                    <div class="title"><b>Мойщик посуды ЗП от 48 000 руб. до 51 500 руб.</b></div>
-                    <div class="content">
-                        <p><b>Условия:</b> <br>
-                            График работы: 2/2 (с 8.00 до 20.00 или с 20.00 до 8.00); <br>
-                            <b>Обязанности:</b> <br>
-                            Мойка производственного инвентаря, вагонеток, шпилек, тележек, противней. <br>
-                            <b>Требования:</b> <br>
-                            Активность; <br>
-                            Устойчивость к физическим нагрузкам; <br>
-                            Наличие медицинской книжки или готовность ее оформления; <br>
-                            Опыт работы на пищевом предприятии приветствуется.</p>
+    <!-- Вакансия 2 -->
+    <div class="block">
+        <div class="titl">Водитель B,C ЗП от 90 000 руб.</div>
+        <div class="content">
+            <p class="content-block_title">Условия:</p>
+            <p class="content-block_podTitle">График: 5/2</p>
+            
+            <p class="content-block_title">Обязанности:</p>
+            <p class="content-block_podTitle">Доставка груза</p>
+            <p class="content-block_podTitle">Контроль ТС</p>
+            
+            <p class="content-block_title">Требования:</p>
+            <p class="content-block_podTitle">Стаж от 3 лет</p>
+            
+            <button class="btn" onclick="openModal(2)">Откликнуться</button>
+        </div>
+    </div>
 
-                        <button class="btn" onclick="openModal()" style="background-color: darkorange">Откликнутся на вакансию</button>
-                    </div>
-                </div>
-                <!-- Модельное окно -->
-                <div id="modal" class="modal">
-                    <div class="modal-box">
-                        <span class="close" onclick="closeModal()">&times;</span>
-                        <h3>Отправить резюме</h3>
-                        <form id="registration" name="registration" class="parametr">
-                            <label for="reg-fam">Ваша Фамилия:</label>
-                            <input type="text" id="fam" name="fam" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите вашу фамилию">
-        
-                            <label for="reg-name">Ваше имя:</label>
-                            <input type="text" id="name" name="name" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите ваше имя">
-        
-                            <label for="reg-ote">Ваше Отчество:</label>
-                            <input type="text" id="ote" name="ote" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите ваше отчество">
-        
-                            <label for="reg-email">Email:</label>
-                            <input type="email" id="email" name="email" required placeholder="Введите ваш email"
-                                pattern="(^(\D\w+)@(mail\.ru||yandex\.ru||gmail\.com))$">
-        
-                            <label for="reg-phone">Телефон:</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__"
-                                maxlength="18" inputmode="tel">    
-                        </form>
-                        <form id="registration" name="registration" class="parametr">
-                        <div class="message">
-                            <label for="reg-phone">Сообщение</label>    
-                            <textarea name="message" id="cont-massage" style="height: 150px;"></textarea>
-                        </div>
-                        </form>
-                        <button class="btn" onclick="closeModal()">Отправить</button>
-                    </div>
-                </div>
+    <!-- Вакансия 3 -->
+    <div class="block">
+        <div class="titl">Менеджер по продажам ЗП от 80 000 руб.</div>
+        <div class="content">
+            <p class="content-block_title">Условия:</p>
+            <p class="content-block_podTitle">Оклад + %</p>
+            
+            <p class="content-block_title">Обязанности:</p>
+            <p class="content-block_podTitle">Работа с клиентами</p>
+            <p class="content-block_podTitle">Поиск заказчиков</p>
+            
+            <p class="content-block_title">Требования:</p>
+            <p class="content-block_podTitle">Опыт продаж</p>
+            
+            <button class="btn" onclick="openModal(3)">Откликнуться</button>
+        </div>
+    </div>
 
-                        <!-- второй -->
-                <div class="block" id="myBloc">
-                    <div class="titl"><b>Пекарь в хлебный цех ЗП от 70 000 руб.</b></div>
-                    <div class="content">
-                            <p class="content-block_title">Условия:</p>
-                            <p class="content-block_podTitle">График работы : 2/2 (день/ночь/отсыпной/выходной с 08:00 - 20:00 и 20:00 - 08:00) </p>
-                            <p class="content-block_title">Обязанности:</p>
-                            <p class="content-block_podTitle">Ведение технологического процесса выпечки хлеба; </p>
-                            <p class="content-block_podTitle">Hаблюдeние за режимом pаcстойки тeстoвыx зaготовoк к выпeчкe;</p> 
-                            <p class="content-block_title">Требования:</p>
-                            <p class="content-block_podTitle">Опыт работы пекарем на производстве будет преимуществом;</p>
-                            <p class="content-block_podTitle">Опыт работы с ротационной и подовой печами будет преимуществом.</p>
-                            <button class="btn" onclick="openModal()" style="background-color: darkorange">Откликнутся на вакансию</button>
-                    </div>
-                </div>
-                <!-- Модельное окно -->
-                <div id="moda" class="modal">
-                    <div class="modal-box">
-                        <span class="close" onclick="closeModal()">&times;</span>
-                        <h3 id="modalTitle">Отправить резюме</h3>
-                        
-                        <div class="form-row">
-                            <form class="parametr">
-                                <label for="fam">Ваша Фамилия:</label>
-                                <input type="text" id="fam" name="fam" required pattern="(^[а-яА-Яa-zA-ZёЁ\s]+$)" placeholder="Введите вашу фамилию">
-                                
-                                <label for="name">Ваше Имя:</label>
-                                <input type="text" id="name" name="name" required pattern="(^[а-яА-Яa-zA-ZёЁ\s]+$)" placeholder="Введите ваше имя">
-                                
-                                <label for="ote">Ваше Отчество:</label>
-                                <input type="text" id="ote" name="ote" pattern="(^[а-яА-Яa-zA-ZёЁ\s]+$)" placeholder="Введите ваше отчество">
-                            </form>
-                            
-                            <form class="parametr">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required placeholder="example@mail.ru">
-                                
-                                <label for="phone">Телефон:</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 123-45-67" maxlength="18">
-                            </form>
-                        </div>
-                        
-                        <form class="parametr">
-                            <div class="message">
-                                <label for="message">Сообщение (опыт работы, навыки):</label>
-                                <textarea name="message" id="message" placeholder="Расскажите о вашем опыте работы, образовании, навыках. Почему хотите работать именно у нас?"></textarea>
-                            </div>
-                        </form>
-                        
-                        <button class="btn" onclick="sendForm()" style="background-color: #27ae60; width: 100%; font-size: 18px;">Отправить резюме</button>
-                    </div>
-                </div>
+    <!-- Вакансия 4 -->
+    <div class="block">
+        <div class="titl">Уборщица ЗП от 45 000 руб.</div>
+        <div class="content">
+            <p class="content-block_title">Условия:</p>
+            <p class="content-block_podTitle">График: 2/2</p>
+            
+            <p class="content-block_title">Обязанности:</p>
+            <p class="content-block_podTitle">Уборка помещений</p>
+            <p class="content-block_podTitle">Вынос мусора</p>
+            
+            <p class="content-block_title">Требования:</p>
+            <p class="content-block_podTitle">Без опыта</p>
+            
+            <button class="btn" onclick="openModal(4)">Откликнуться</button>
+        </div>
+    </div>
 
-                <!-- Третий -->
-                <div class="block" id="myBlo">
-                    <div class="tit"><b>Транспортировщик ЗП от 57 000 руб.</b></div>
-                    <div class="content">
-                        <p class="content-block_title">Условия:</p>
-                            <p class="content-block_podTitle">График работы: 2/2 (день/ночь/отсыпной/выходной).</p>
-                            <p class="content-block_title">Обязанности:</p>
-                            <p class="content-block_podTitle">Оказывать помощь работникам цеха по переносу сырья; </p>
-                            <p class="content-block_podTitle">Осуществлять перемещение пустой и заполненной тары по цеху.</p> 
-                            <p class="content-block_title">Требования:</p>
-                            <p class="content-block_podTitle">Наличие медицинской книжки или готовность ее оформления;</p>
-                            <p class="content-block_podTitle">Опыт работы на пищевом предприятии приветствуется.</p>
-                        <button class="btn" onclick="openModal()" style="background-color: darkorange">Откликнутся на вакансию</button>
-                    </div>
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-box">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Отправить резюме</h3>
+            
+            <div class="form-row">
+                <div class="parametr">
+                    <label>Фамилия:</label>
+                    <input type="text" id="fam1" required>
+                    
+                    <label>Имя:</label>
+                    <input type="text" id="name1" required>
                 </div>
-                <!-- Модельное окно -->
-                <div id="mod" class="modal">
-                    <div class="modal-box">
-                        <span class="close" onclick="closeModal()">&times;</span>
-                        <h3>Отправить резюме</h3>
-                        <form id="registration" name="registration" class="parametr">
-                            <label for="reg-fam">Ваша Фамилия:</label>
-                            <input type="text" id="fam" name="fam" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите вашу фамилию">
-        
-                            <label for="reg-name">Ваше имя:</label>
-                            <input type="text" id="name" name="name" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите ваше имя">
-        
-                            <label for="reg-ote">Ваше Отчество:</label>
-                            <input type="text" id="ote" name="ote" required pattern="(^[а-яА-Яa-zA-ZёЁ]+$)" placeholder=" Введите ваше отчество">
-        
-                            <label for="reg-email">Email:</label>
-                            <input type="email" id="email" name="email" required placeholder="Введите ваш email"
-                                pattern="(^(\D\w+)@(mail\.ru||yandex\.ru||gmail\.com))$">
-        
-                            <label for="reg-phone">Телефон:</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__"
-                                maxlength="18" inputmode="tel">    
-                        </form>
-                        <form id="registration" name="registration" class="parametr">
-                        <div class="message">
-                            <label for="reg-phone">Сообщение</label>    
-                            <textarea name="message" id="cont-massage" style="height: 300px;",width: 800px;></textarea>
-                        </div>
-                        </form>
-                        <button class="btn" onclick="closeModal()">Отправить</button>
-                    </div>
+                
+                <div class="parametr">
+                    <label>Email:</label>
+                    <input type="email" id="email1" required>
+                    
+                    <label>Телефон:</label>
+                    <input type="tel" id="phone1" required>
                 </div>
             </div>
+            
+            <label>Сообщение:</label>
+            <textarea id="message1" rows="4" placeholder="Ваш опыт, навыки..."></textarea>
+            
+            <button class="btn" onclick="sendForm()" style="background: #28a745; ">Отправить</button>
+        </div>
+    </div>
 
-    <script src="js/cod.js"></script>
+    <script src="js/cart.js"></script>
 </body> 
