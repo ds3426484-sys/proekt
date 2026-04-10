@@ -1,3 +1,4 @@
+// Слайдер
 document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.slider');
     const track = document.querySelector('.slider-track');
@@ -43,25 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // рвскрывающийся блок
+// -----------------------------------------------------------
+    // рвскрывающийся блок первый
     document.getElementById('myBlock').onclick = function(e) {
         if (e.target.classList.contains('title')) {
             this.classList.toggle('open');
@@ -77,3 +61,55 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('modal').style.display = 'none';
     }
 
+
+// рвскрывающийся блок второй
+    document.getElementById('myBloc').onclick = function(e) {
+        if (e.target.classList.contains('titl')) {
+            this.classList.toggle('open');
+        }
+    }
+    
+    // модельное окно
+    function openModal() {
+        document.getElementById('moda').style.display = 'block';
+    }
+    
+    function closeModal() {
+        document.getElementById('moda').style.display = 'none';
+    }
+
+
+
+// рвскрывающийся блок третий
+document.getElementById('myBlo').onclick = function(e) {
+    if (e.target.classList.contains('tit')) {
+        this.classList.toggle('open');
+    }
+}
+
+// модельное окно
+function closeModal() {
+    document.getElementById('moda').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function sendForm() {
+    const fam = document.getElementById('fam').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    
+    if (fam && name && email && phone) {
+        alert(' Резюме отправлено!\nМы свяжемся с вами в ближайшее время.');
+        closeModal();
+    } else {
+        alert(' Заполните все обязательные поля!');
+    }
+}
+
+// Закрытие по клику вне модалки
+window.onclick = function(event) {
+    if (event.target.id === 'moda') {
+        closeModal();
+    }
+}
