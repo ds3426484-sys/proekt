@@ -1,4 +1,4 @@
-/* about.css - Минимальная стилизация для about.html */
+/* about.css - стилизация для about.html */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 .about-section {
@@ -14,7 +14,7 @@
 }
 
 .about-section h2 {
-    font-size: 2.5rem;
+    font-size: 40px;
     color: #8B4513;
     text-align: center;
     margin-bottom: 30px;
@@ -32,7 +32,7 @@
 }
 
 .about-content {
-    font-size: 1.2rem;
+    font-size: 19,2px;
     line-height: 1.8;
     color: #5D4037;
     text-align: justify;
@@ -55,7 +55,7 @@
 .news-date {
     color: #D2691E;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
@@ -66,10 +66,10 @@
     }
     
     .about-section h2 {
-        font-size: 2rem;
+        font-size: 32px;
     }
     
     .about-content {
-        font-size: 1.1rem;
+        font-size: 17,6px;
     }
 }
