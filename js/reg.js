@@ -1,52 +1,75 @@
+// =====================================================
+// ФУНКЦИЯ ОТПРАВКИ ДАННЫХ НА СЕРВЕР РЕГИСТРАЦИИ
+// =====================================================
 async function fetchData(d) {
+	//адрес сервера для регистрации
 	const url = `http://localhost/myserver2/reg`;
+	
+	// Отправляем POST запрос с данными пользователя
 	const response = await fetch(url, {
-		method: "POST",
+		method: "POST", // Тип запроса - отправка данных
 		headers: {
-			Accept: "application/json",
-			"Content-Type": "application/x-www-form-urlencoded",
+			Accept: "application/json", // Сервер вернет JSON
+			"Content-Type": "application/x-www-form-urlencoded", // Формат данных как в обычной форме
 		},
-		body: new URLSearchParams(d).toString(),
+		body: new URLSearchParams(d).toString(), // Превращаем объект в строку для формы
 	});
-	return response; // Возвращаем response для обработки
+	
+	return response; // Возвращаем ответ сервера для проверки
 }
-console.log(0)
-// ? Обработчик формы регистрации
-function get_data_form() {
 
+// =====================================================
+// ОБРАБОТЧИК КНОПКИ РЕГИСТРАЦИИ
+// =====================================================
+function get_data_form() {
+	// Находим кнопку "Зарегистрироваться" по её ID
 	const btn_reg = document.querySelector("#btn-register");
 
+	// При клике на кнопку выполняем регистрацию
 	btn_reg.addEventListener("click", (event) => {
-		// Сбор данных формы
-		const fam = document.querySelector("#fam").value;
-		const name = document.querySelector("#name").value;
-		const ote = document.querySelector("#ote").value;
-		const username = document.querySelector("#username").value;
-		const email = document.querySelector("#email").value;
-		const phone = document.querySelector("#phone").value;
-		const password = document.querySelector("#password").value;
+		// === СОБИРАЕМ ВСЕ ДАННЫЕ ИЗ ПОЛЕЙ ФОРМЫ ===
+		const fam = document.querySelector("#fam").value;        // Фамилия
+		const name = document.querySelector("#name").value;      // Имя
+		const ote = document.querySelector("#ote").value;        // Отчество
+		const username = document.querySelector("#username").value; // Имя пользователя
+		const email = document.querySelector("#email").value;    // Электронная почта
+		const phone = document.querySelector("#phone").value;    // Телефон
+		const password = document.querySelector("#password").value; // Пароль
 
+		// Создаем объект со всеми данными для отправки
 		d = {
-			fam: fam,
-			name: name,
-			ote: ote,
-			username: username,
-			email: email,
-			phone: phone,
-			password: password,
-		}
+			fam: fam,      // Фамилия
+			name: name,    // Имя
+			ote: ote,      // Отчество
+			username: username, // Логин
+			email: email,  // Почта
+			phone: phone,  // Телефон
+			password: password // Пароль
+		};
 
 		try {
-			// Отправка на сервер
+			// === ОТПРАВЛЯЕМ ДАННЫЕ НА СЕРВЕР ===
 			const response = fetchData(d);
+			
+			// Проверяем статус ответа сервера
 			if (response.ok) {
+				// СЮДА добавить: успешная регистрация
+				// Например: alert("Регистрация успешна!");
 			} else {
+				// СЮДА добавить: ошибка сервера
+				// Например: alert("Ошибка регистрации");
 			}
 		} catch (error) {
+			// СЮДА добавить: ошибка сети или сервера
+			// Например: console.error("Ошибка:", error);
 		}
 	});
 }
-// Инициализация при загрузке DOM
+
+// =====================================================
+// ЗАПУСК КОДА ПОСЛЕ ЗАГРУЗКИ СТРАНИЦЫ
+// =====================================================
 document.addEventListener("DOMContentLoaded", function () {
+	// Когда страница полностью загрузилась - подключаем обработчики
 	get_data_form();
 });

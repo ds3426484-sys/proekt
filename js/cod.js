@@ -1,42 +1,59 @@
-// Слайдер
+// =====================================================
+// СЛАЙДЕР (автоматическая прокрутка)
+// =====================================================
 document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.slider');
-    const track = document.querySelector('.slider-track');
-    const slides = document.querySelectorAll('.slide');
+    // === НАХОДИМ ОСНОВНЫЕ ЭЛЕМЕНТЫ СЛАЙДЕРА ===
+    const slider = document.querySelector('.slider');           // Контейнер всего слайдера
+    const track = document.querySelector('.slider-track');      // Полоса, где двигаются слайды
+    const slides = document.querySelectorAll('.slide');         // Все слайды (карточки)
     
-    let currentSlide = 0;
-    const slideCount = slides.length;
-    const slideWidth = slides[0].clientWidth;
-    let autoSlideInterval;
+    // === ПЕРЕМЕННЫЕ ДЛЯ РАБОТЫ СЛАЙДЕРА ===
+    let currentSlide = 0;                    // Номер текущего слайда (начинаем с 0)
+    const slideCount = slides.length;        // Общее количество слайдов
+    const slideWidth = slides[0].clientWidth; // Ширина одного слайда (пиксели)
+    let autoSlideInterval;                   // ID интервала для автопрокрутки
     
-    // Функция для перехода к слайду
+    // =====================================================
+    // ФУНКЦИЯ ПЕРЕХОДА К СЛАЙДУ ПО НОМЕРУ
+    // =====================================================
     function goToSlide(index) {
+        // Циклическая прокрутка: если вышли за границы - переходим в начало/конец
         if (index < 0) {
-            currentSlide = slideCount - 1;
+            currentSlide = slideCount - 1;  // Последний слайд
         } else if (index >= slideCount) {
-            currentSlide = 0;
+            currentSlide = 0;               // Первый слайд
         } else {
-            currentSlide = index;
+            currentSlide = index;           // Обычный переход
         }
         
+        // Двигаем дорожку слайдов влево на ширину текущего слайда
         track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
     }
     
-    // Автопрокрутка
+    // =====================================================
+    // ЗАПУСК АВТОПРОКРУТКИ (каждые 3 секунды)
+    // =====================================================
     function startAutoSlide() {
+        // Устанавливаем таймер: каждые 3000мс (3 сек) переходим к следующему слайду
         autoSlideInterval = setInterval(() => {
-            goToSlide(currentSlide + 1);
-        }, 3000); // Смена слайда каждые 3 секунды
+            goToSlide(currentSlide + 1);  // Следующий слайд
+        }, 3000);
     }
     
-    // Остановка автопрокрутки при наведении
+    // =====================================================
+    // ОСТАНОВКА АВТОПРОКРУТКИ ПРИ НАВЕДЕНИИ МЫШИ
+    // =====================================================
     slider.addEventListener('mouseenter', () => {
-        clearInterval(autoSlideInterval);
+        clearInterval(autoSlideInterval);  // Останавливаем таймер
     });
     
-    // Возобновление автопрокрутки при уходе курсора
-    slider.addEventListener('mouseleave', startAutoSlide);
+    // =====================================================
+    // ВОЗОБНОВЛЕНИЕ АВТОПРОКРУТКИ ПРИ УХОДЕ МЫШИ
+    // =====================================================
+    slider.addEventListener('mouseleave', startAutoSlide);  // Запускаем заново
     
-    // Запуск автопрокрутки
-    startAutoSlide();
+    // =====================================================
+    // ЗАПУСК СЛАЙДЕРА
+    // =====================================================
+    startAutoSlide();  // Начинаем автопрокрутку сразу после загрузки
 });

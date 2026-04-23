@@ -71,88 +71,6 @@
             border: 2px solid #49453f;
         }
 
-/* --------------------------------Регистрация - Вход------------------------------------------- */
-
-.registration-page {
-    display: flex; /* Flexbox для центрирования */
-     align-items: center; /* Центрирование по вертикали */
-     justify-content: center; /* Центрирование по горизонтали */
-     padding: 60px 0; /* Отступы сверху и снизу */
- 
- }
- 
- .registration-form-wrapper {
-     background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон (95%) */
-     padding: 40px;/* Внутренние отступы 40px */
-     border-radius: 8px; /* Закруглённые углы */
-     box-shadow: 0 4px 20px rgba(139, 115, 85, 0.15);  /* Мягкая тень тёплого оттенка */
-     max-width: 450px; /* Максимальная ширина формы */
-     width: 100%; /* Адаптивная ширина */
-     margin: 0 auto;/* Центрирование блока */
- }
- 
- .registration-form-wrapper h2 {
-     text-align: center; /* Текст по центру */
-     margin-bottom: 30px; /* Отступ снизу */
-     color: #09617c; /* Тёплый коричневый цвет */
- }
- 
- .registration-form-wrapper label {
-     display: block; /* Каждый label с новой строки */
-     margin-bottom: 8px; /* Отступ до поля ввода */
-     font-weight: bold; /* Жирный шрифт */
-     color: #264061; /* Тёмно-коричневый цвет */
- }
- 
- .registration-form-wrapper input[type="text"],
- .registration-form-wrapper input[type="password"],
- .registration-form-wrapper input[type="email"],
- .registration-form-wrapper input[type="tel"] {
-     width: 100%; /* На всю ширину контейнера */
-     padding: 12px; /* Внутренние отступы */
-     margin-bottom: 20px; /* Отступ снизу до следующего элемента */
-     border-radius: 4px; /* Небольшое скругление */
-     box-sizing: border-box; /* Padding включён в ширину */
-     font-family: 'Montserrat', sans-serif;  /* Шрифт как на сайте */
- }
- /*  !
-      Валидация input 
-! */
-input:invalid {
-  border: 2px solid red;
-}
-
-input:valid {
-  border: 1px solid #1fce18;
-}
- .registration-form-wrapper
- .btn-register-submit {
-     width: 100%; /* На всю ширину */
-     background-color: #09317c; /* Коричневый фон */
-     color: #fff; /* Белый текст */
-     border: 2px solid #052957; /* Рамка в цвет фона */
-     padding: 12px 25px; /* Отступы */
-     border-radius: 5px; /* Скругление */
-     margin: 10px 0 20px 0; /* Отступы сверху и снизу */
-     cursor: pointer; /* Курсор-указатель */
-     font-weight: bold; /* Жирный текст */
- }
- 
- .registration-footer,
- .registration-back {
-     text-align: center; /* Текст по центру */
-     margin-top: 15px; /* Отступ сверху 15px */
-     font-size: 14.4px; /* Шрифт на 10% меньше основного (≈14.4px) */
-     color: #770606; /* Серый цвет текста */
- }
- 
- .registration-footer a,
- .registration-back a {
-     color: #523a03; /* Золотисто-бежевый цвет ссылок */
-     font-weight: bold; /* Жирное начертание */
- }
-
-
 
  /*-----------------------Блоки-для католога и работы в компании-------------------------------  */
 
@@ -199,6 +117,30 @@ input:valid {
     font-size: 19.2px; /* Размер цены */
     color: #8b7355; /* Тёплый коричневый цвет для лучшей читаемости */
     margin-top: 10px; /* Отступ сверху */
+
+
+/* наши работники */
+.service-item1 img {
+    border-radius: 5px; /* Закругление изображения */
+    margin-bottom: 15px; /* Отступ снизу */
+    width: 80%; /* Полная ширина */
+    height: 455px; /* Фиксированная высота */
+    object-fit: cover; /* Заполнение без искажений */
+}
+
+.service-item1 {
+    text-align: center; /* Центрирование текста */
+    background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон */
+    padding: 25px; /* Внутренние отступы */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Легкая тень */
+    backdrop-filter: blur(10px); /* Эффект размытия фона */
+}
+
+
+
+
+
 }
 /* ------------------------------------------------------------------------ */
 
@@ -230,29 +172,7 @@ input:valid {
 }
 
 
-/* наши работники */
-.service-item1 img {
-    border-radius: 5px; /* Закругление изображения */
-    margin-bottom: 15px; /* Отступ снизу */
-    width: 80%; /* Полная ширина */
-    height: 455px; /* Фиксированная высота */
-    object-fit: cover; /* Заполнение без искажений */
-}
-
-.service-item1 {
-    text-align: center; /* Центрирование текста */
-    background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон */
-    padding: 25px; /* Внутренние отступы */
-    border-radius: 8px; /* Закругленные углы */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Легкая тень */
-    backdrop-filter: blur(10px); /* Эффект размытия фона */
-}
-
-
-
-
-
-/* --------------------------------------------------------------- */
+/* ---------------------------адаптация для слайдера и меню------------------------------------ */
 
 /* адаптация для меню */
 @media (max-width: 768px) {
@@ -311,7 +231,7 @@ input:valid {
         min-width: 100%;
     }
 }
-
+/*  */
 .slider-nav {
     position: absolute;
     top: 50%;
@@ -495,6 +415,86 @@ input:valid {
 
 
 
+/* --------------------------------Регистрация - Вход------------------------------------------- */
+
+.registration-page {
+    display: flex; /* Flexbox для центрирования */
+     align-items: center; /* Центрирование по вертикали */
+     justify-content: center; /* Центрирование по горизонтали */
+     padding: 60px 0; /* Отступы сверху и снизу */
+ 
+ }
+ 
+ .registration-form-wrapper {
+     background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон (95%) */
+     padding: 40px;/* Внутренние отступы 40px */
+     border-radius: 8px; /* Закруглённые углы */
+     box-shadow: 0 4px 20px rgba(139, 115, 85, 0.15);  /* Мягкая тень тёплого оттенка */
+     max-width: 450px; /* Максимальная ширина формы */
+     width: 100%; /* Адаптивная ширина */
+     margin: 0 auto;/* Центрирование блока */
+ }
+ 
+ .registration-form-wrapper h2 {
+     text-align: center; /* Текст по центру */
+     margin-bottom: 30px; /* Отступ снизу */
+     color: #09617c; /* Тёплый коричневый цвет */
+ }
+ 
+ .registration-form-wrapper label {
+     display: block; /* Каждый label с новой строки */
+     margin-bottom: 8px; /* Отступ до поля ввода */
+     font-weight: bold; /* Жирный шрифт */
+     color: #264061; /* Тёмно-коричневый цвет */
+ }
+ 
+ .registration-form-wrapper input[type="text"],
+ .registration-form-wrapper input[type="password"],
+ .registration-form-wrapper input[type="email"],
+ .registration-form-wrapper input[type="tel"] {
+     width: 100%; /* На всю ширину контейнера */
+     padding: 12px; /* Внутренние отступы */
+     margin-bottom: 20px; /* Отступ снизу до следующего элемента */
+     border-radius: 4px; /* Небольшое скругление */
+     box-sizing: border-box; /* Padding включён в ширину */
+     font-family: 'Montserrat', sans-serif;  /* Шрифт как на сайте */
+ }
+ /*  !
+      Валидация input 
+! */
+input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 1px solid #1fce18;
+}
+ .registration-form-wrapper
+ .btn-register-submit {
+     width: 100%; /* На всю ширину */
+     background-color: #09317c; /* Коричневый фон */
+     color: #fff; /* Белый текст */
+     border: 2px solid #052957; /* Рамка в цвет фона */
+     padding: 12px 25px; /* Отступы */
+     border-radius: 5px; /* Скругление */
+     margin: 10px 0 20px 0; /* Отступы сверху и снизу */
+     cursor: pointer; /* Курсор-указатель */
+     font-weight: bold; /* Жирный текст */
+ }
+ 
+ .registration-footer,
+ .registration-back {
+     text-align: center; /* Текст по центру */
+     margin-top: 15px; /* Отступ сверху 15px */
+     font-size: 14.4px; /* Шрифт на 10% меньше основного (≈14.4px) */
+     color: #770606; /* Серый цвет текста */
+ }
+ 
+ .registration-footer a,
+ .registration-back a {
+     color: #523a03; /* Золотисто-бежевый цвет ссылок */
+     font-weight: bold; /* Жирное начертание */
+ }
 
 
 

@@ -1,44 +1,67 @@
-
 /**
- * Загружает новости и создает .news-item
+ * =====================================================
+ * ФУНКЦИЯ ЗАГРУЗКИ НОВОСТЕЙ С СЕРВЕРА
+ * Создает карточки .news-item в контейнере .news-container
+ * =====================================================
  */
 async function fetchAndDisplayNews() {
   try {
-    // Шаг 1: AJAX GET-запрос к серверному API
-    const url = `http://localhost/myserver2/news`;
+    // =====================================================
+    // ШАГ 1: GET-запрос к серверу за новостями
+    // =====================================================
+    const url = `http://localhost/myserver2/news`;  // Ссылка на API новостей
+    
+    // Отправляем запрос и ждем ответа
     let response = await fetch(url, {
-      method: "GET",
-      headers: { 'Accept': 'application/json' },
+      method: "GET",  // Получаем данные
+      headers: { 'Accept': 'application/json' }  // Ожидаем JSON
     });
 
-    // Шаг 2: Парсинг JSON из БД news
-    let newsData = await response.json();
-    console.log('Данные новостей:', newsData);
+    // =====================================================
+    // ШАГ 2: Преобразуем JSON-ответ в массив объектов
+    // =====================================================
+    let newsData = await response.json();  // [{date: "...", text: "..."}, ...]
+    console.log('📋 Получены новости:', newsData);  // Показываем в консоли
 
-    // Шаг 3: Очистка контейнера .news-container
-    const newsContainer = document.querySelector(".news-container");
-    newsContainer.innerHTML = '';
+    // =====================================================
+    // ШАГ 3: Удаляем старые новости с страницы
+    // =====================================================
+    const newsContainer = document.querySelector(".news-container");  // Блок для новостей
+    newsContainer.innerHTML = '';  // Очищаем содержимое
 
-    // Шаг 4: Создание карточек новостей
-    newsData.forEach(item => {
-      const newsItem = document.createElement('div');
-      newsItem.className = 'news-item';
+    // =====================================================
+    // ШАГ 4: Создаем HTML-карточку для каждой новости
+    // =====================================================
+    newsData.forEach(item => {  // Цикл по всем новостям
+      // Создаем новый блок новости
+      const newsItem = document.createElement('div');  // <div></div>
+      newsItem.className = 'news-item';  // Добавляем CSS-класс
+      
+      // Заполняем содержимым из базы данных
       newsItem.innerHTML = `
-        <div class="news-date">${item.date}</div>
-        <p>${item.text}</p>
+        <div class="news-date">${item.date}</div>  // Дата из БД
+        <p>${item.text}</p>                       // Текст из БД
       `;
+      
+      // Вставляем готовую карточку в контейнер
       newsContainer.appendChild(newsItem);
     });
 
   } catch (error) {
-    // Error: показываем сообщение
+    // =====================================================
+    // ОБРАБОТКА ОШИБОК (нет сервера, нет интернета)
+    // =====================================================
     console.error('Ошибка загрузки новостей:', error);
+    
+    // Показываем сообщение об ошибке вместо новостей
     const newsContainer = document.querySelector(".news-container");
     if (newsContainer) {
-      newsContainer.innerHTML = '<p class="error-msg">Ошибка загрузки новостей. Проверьте сервер.</p>';
+      newsContainer.innerHTML = '<p class="error-msg"> Ошибка загрузки новостей. Проверьте сервер.</p>';
     }
   }
 }
 
-// Автозапуск при загрузке DOM
+// =====================================================
+// АВТОЗАПУСК при полной загрузке страницы
+// =====================================================
 document.addEventListener("DOMContentLoaded", fetchAndDisplayNews);
